@@ -2,10 +2,12 @@ import { Card } from "@/components/ui/card";
 import { FileText, Activity, ScrollText, Database, TrendingUp, Brain, Shield, Users, Target, Lightbulb } from "lucide-react";
 
 const ProblemFocusSection = () => (
-  <section className="py-32 bg-zinc-950">
+  <section className="pt-16 pb-12 sm:pt-32 sm:pb-32 bg-black">
+
+
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       {/* 90/10 Problem Focus Visualization */}
-      <div className="space-y-12">
+      <div className="space-y-8 sm:space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black mb-6 max-w-[17ch] sm:max-w-none mx-auto break-words leading-tight">
             WHILE OTHERS FOCUS ON THE
@@ -120,54 +122,52 @@ const ProblemFocusSection = () => (
               <div className="w-full border-t border-zinc-700"></div>
             </div>
             <div className="relative flex justify-center">
-              <div className="bg-zinc-950 px-6 py-3 rounded-full border border-zinc-700">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <div className="bg-zinc-950 px-3 sm:px-6 py-3 rounded-full border border-zinc-700 w-full max-w-[320px] sm:max-w-fit">
+                <div className="flex items-center justify-center gap-1 sm:gap-2">
+                  <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse" />
+                  <span className="text-[11px] sm:text-sm font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-center">
                     THE 10% THAT CREATES 90% OF THE VALUE
                   </span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* Market Positioning Visualization */}
-          <div className="mt-12 text-center space-y-6">
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="space-y-3">
-                <div className="text-2xl font-bold text-zinc-500">COMPETITORS</div>
-                <div className="text-sm text-zinc-400">Fight over commoditized solutions</div>
-                <div className="flex justify-center">
-                  <div className="w-16 h-16 rounded-xl bg-zinc-800 border-2 border-zinc-700 flex items-center justify-center">
-                    <Users className="w-8 h-8 text-zinc-600" />
-                  </div>
+          <div className="mt-12 text-center">
+            <div className="flex flex-row justify-between items-stretch gap-2 sm:gap-6 max-w-full px-2 sm:px-4 mx-auto">
+              {/* COMPETITORS */}
+              <div className="flex-1 min-w-0 space-y-2 flex flex-col justify-between items-center text-center px-1">
+                <div className="text-xs sm:text-xl font-bold text-zinc-500">COMPETITORS</div>
+                <div className="text-[10px] sm:text-sm text-zinc-400 leading-tight">Fight over commoditized solutions</div>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-zinc-800 border-2 border-zinc-700 flex items-center justify-center mx-auto">
+                  <Users className="w-5 h-5 sm:w-8 sm:h-8 text-zinc-600" />
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              {/* NUMIO */}
+              <div className="flex-1 min-w-0 space-y-2 flex flex-col justify-between items-center text-center px-1">
+                <div className="text-xs sm:text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   NUMIO
                 </div>
-                <div className="text-sm text-cyan-400 font-semibold">Owns the complex problem space</div>
-                <div className="flex justify-center">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 border-2 border-cyan-400 flex items-center justify-center animate-pulse">
-                    <Target className="w-8 h-8 text-black" />
-                  </div>
+                <div className="text-[10px] sm:text-sm text-cyan-400 font-semibold leading-tight">Owns the complex problem space</div>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 border-2 border-cyan-400 flex items-center justify-center animate-pulse mx-auto">
+                  <Target className="w-5 h-5 sm:w-8 sm:h-8 text-black" />
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <div className="text-2xl font-bold text-zinc-500">MARKET GAP</div>
-                <div className="text-sm text-zinc-400">Unaddressed complex needs</div>
-                <div className="flex justify-center">
-                  <div className="w-16 h-16 rounded-xl bg-zinc-800 border-2 border-zinc-700 border-dashed flex items-center justify-center">
-                    <Lightbulb className="w-8 h-8 text-zinc-600" />
-                  </div>
+              {/* MARKET GAP */}
+              <div className="flex-1 min-w-0 space-y-2 flex flex-col justify-between items-center text-center px-1">
+                <div className="text-xs sm:text-xl font-bold text-zinc-500">MARKET GAP</div>
+                <div className="text-[10px] sm:text-sm text-zinc-400 leading-tight">Unaddressed complex needs</div>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-zinc-800 border-2 border-zinc-700 border-dashed flex items-center justify-center mx-auto">
+                  <Lightbulb className="w-5 h-5 sm:w-8 sm:h-8 text-zinc-600" />
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

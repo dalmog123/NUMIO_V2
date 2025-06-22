@@ -1,9 +1,10 @@
 "use client";
 
 import ScrollLink from "@/components/ScrollLink";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import PentagramLogo from "./PentegramLogo";
+import Image from "next/image";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,15 +28,20 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full border-b border-zinc-800 ${
-        menuOpen ? "bg-transparent" : "bg-black/80 backdrop-blur-xl"
-      }`}
+      className={`fixed top-0 z-50 w-full border-b border-zinc-800 ${menuOpen ? "bg-transparent" : "bg-black/80 backdrop-blur-xl"
+        }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="h-10 w-10 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center text-black font-bold text-sm">
-              N
+              <Image
+                src="/assets/NumioLogo.png"
+                alt="Pentagram Logo"
+                width={150}
+                height={150}
+                priority
+              />
             </div>
             <div>
               <span className="font-bold text-xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -139,11 +145,10 @@ const Header = () => {
       )}
       {/* Dropdown menu */}
       <div
-        className={`lg:hidden fixed left-0 right-0 top-16 w-full bg-zinc-900 border-b border-zinc-800 shadow-2xl z-[9999] flex flex-col items-center py-6 space-y-6 transition-all duration-300 ${
-          menuOpen
-            ? "opacity-100 scale-100 pointer-events-auto"
-            : "opacity-0 scale-95 pointer-events-none"
-        }`}
+        className={`lg:hidden fixed left-0 right-0 top-16 w-full bg-zinc-900 border-b border-zinc-800 shadow-2xl z-[9999] flex flex-col items-center py-6 space-y-6 transition-all duration-300 ${menuOpen
+          ? "opacity-100 scale-100 pointer-events-auto"
+          : "opacity-0 scale-95 pointer-events-none"
+          }`}
         style={{ overscrollBehavior: "contain" }}
       >
         <div onClick={() => setMenuOpen(false)}>
