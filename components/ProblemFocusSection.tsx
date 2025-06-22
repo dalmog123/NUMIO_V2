@@ -7,11 +7,11 @@ const ProblemFocusSection = () => (
       {/* 90/10 Problem Focus Visualization */}
       <div className="space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-5xl font-black mb-6">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black mb-6 max-w-[17ch] sm:max-w-none mx-auto break-words leading-tight">
             WHILE OTHERS FOCUS ON THE
             <span className="text-green-400"> EASY 90%</span>
           </h2>
-          <h2 className="text-5xl font-black mb-6">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black mb-6 max-w-[17ch] sm:max-w-none mx-auto break-words leading-tight">
             WE TACKLE THE
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> HARDEST 10%</span>
           </h2>
@@ -83,19 +83,19 @@ const ProblemFocusSection = () => (
                   <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <TrendingUp className="w-4 h-4 text-black" />
                   </div>
-                  <div className="text-xs text-cyan-400 font-medium">Multi-Jurisdiction Tax</div>
+                  <div className="text-xs text-cyan-400 font-medium">VAT Risk & Error Monitoring</div>
                 </Card>
                 <Card className="bg-gradient-to-br from-zinc-900 to-zinc-800 border-zinc-700 p-4 text-center hover:border-purple-500/50 transition-all duration-300 group">
                   <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Brain className="w-4 h-4 text-black" />
+                    <Shield className="w-4 h-4 text-black" />
                   </div>
                   <div className="text-xs text-purple-400 font-medium">Real-time Fraud Detection</div>
                 </Card>
                 <Card className="bg-gradient-to-br from-zinc-900 to-zinc-800 border-zinc-700 p-4 text-center hover:border-green-500/50 transition-all duration-300 group">
                   <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Shield className="w-4 h-4 text-black" />
+                    <FileText className="w-4 h-4 text-black" />
                   </div>
-                  <div className="text-xs text-green-400 font-medium">Predictive Audit Analytics</div>
+                  <div className="text-xs text-green-400 font-medium">Automated Lease Compliance</div>
                 </Card>
                 <Card className="bg-gradient-to-br from-zinc-900 to-zinc-800 border-zinc-700 p-4 text-center hover:border-orange-500/50 transition-all duration-300 group">
                   <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
