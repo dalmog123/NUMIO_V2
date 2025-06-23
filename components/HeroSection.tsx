@@ -2,7 +2,7 @@
 
 import ScrollLink from "@/components/ScrollLink";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, ChevronDown, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import PentagramLogo from "./PentegramLogo";
 
@@ -88,9 +88,23 @@ const HeroSection = () => (
           ))}
         </motion.div>
 
+        {/* scroll cue - moved inside the content area */}
+        <motion.button
+          onClick={() => {
+            document.getElementById("focus")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
+          className="mt-16 mx-auto flex flex-col items-center text-white dark:text-white bg-transparent cursor-pointer hover:text-cyan-400 transition-colors"
+        >
+          <span className="text-sm mb-2">DISCOVER OUR MISSION</span>
+          <ChevronDown className="h-6 w-6" />
+        </motion.button>
+
+
 
         {/* Buttons */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -122,7 +136,7 @@ const HeroSection = () => (
               SCHEDULE A DEMO
             </a>
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   </section>

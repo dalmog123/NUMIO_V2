@@ -20,7 +20,7 @@ const PentagramLogo: React.FC<PentagramLogoProps> = ({ className = "", size = 36
                 <stop offset="100%" stopColor="#06b6d4" />
             </linearGradient>
         </defs>
-        <circle cx="0" cy="0" r="100" fill="none" stroke="url(#pentagramGradient)" strokeWidth="5" />
+        <circle cx="0" cy="0" r="78" fill="none" stroke="url(#pentagramGradient)" strokeWidth="5" />
         <polygon
             points="0,-98 93,-32 57.5,79 -57.5,79 -93,-32"
             fill="none"

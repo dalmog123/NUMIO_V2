@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { FileText, Activity, ScrollText, Database, TrendingUp, Brain, Shield, Users, Target, Lightbulb } from "lucide-react";
 
 const ProblemFocusSection = () => (
-  <section className="pt-16 pb-12 sm:pt-32 sm:pb-32 bg-black">
+  <section id="focus" className="pt-16 pb-12 sm:pt-32 sm:pb-32 bg-black">
 
 
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
