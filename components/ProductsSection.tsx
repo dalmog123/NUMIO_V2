@@ -56,7 +56,7 @@ const ProductsSection = () => (
                 <span className="text-zinc-300">Automated schema validation</span>
               </div>
             </div>
-            <Button
+            {/* <Button
               size="lg"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black font-bold"
               asChild
@@ -68,7 +68,7 @@ const ProductsSection = () => (
               >
                 SCHEDULE A DEMO
               </a>
-            </Button>
+            </Button> */}
           </div>
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-8 border border-zinc-700">
@@ -80,14 +80,14 @@ const ProductsSection = () => (
         </div>
         {/* Revenue Recognition */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative lg:order-1">
+          <div className="relative order-2 lg:order-1">
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-8 border border-zinc-700">
               <div className="w-full h-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
                 <FileText className="w-32 h-32 text-purple-400" />
               </div>
             </div>
           </div>
-          <div className="space-y-8 lg:order-2">
+          <div className="space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
               <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
                 <FileText className="w-8 h-8 text-black" />
@@ -116,7 +116,7 @@ const ProductsSection = () => (
                 <span className="text-zinc-300">Contract modification tracking & versioning</span>
               </div>
             </div>
-            <Button
+            {/* <Button
               size="lg"
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-black font-bold"
               asChild
@@ -128,7 +128,7 @@ const ProductsSection = () => (
               >
                 SCHEDULE A DEMO
               </a>
-            </Button>
+            </Button> */}
           </div>
         </div>
         {/* Leases Management */}
@@ -161,7 +161,7 @@ const ProductsSection = () => (
                 <span className="text-zinc-300">Integrated impairment testing</span>
               </div>
             </div>
-            <Button
+            {/* <Button
               size="lg"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-black font-bold"
               asChild
@@ -173,7 +173,7 @@ const ProductsSection = () => (
               >
                 SCHEDULE A DEMO
               </a>
-            </Button>
+            </Button> */}
           </div>
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-8 border border-zinc-700">
@@ -201,8 +201,7 @@ const ProductsSection = () => (
           </div>
           <Button
             size="lg"
-            variant="outline"
-            className="border-zinc-700 text-white bg-transparent hover:bg-zinc-900"
+            className="bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-600 hover:to-red-600 text-black font-bold"
             asChild
           >
             <a

@@ -1,89 +1,157 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Activity, Brain, Lock, Plug, ScrollText, TrendingUp } from "lucide-react";
+import { Brain, Database, Target } from "lucide-react";
+import PentagramLogo from "./PentegramLogo";
 
-const PlatformSection = () => (
-  <section id="platform" className="py-32 bg-black">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl font-black mb-6">
-          UNIFIED PLATFORM
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> ARCHITECTURE</span>
-        </h2>
-        <p className="text-xl text-zinc-400 max-w-4xl mx-auto">
-          As your business grows, so does your data. Our platform is designed to scale with you, automating your
-          financial processes to let you focus on what matters most.
-        </p>
+const PlatformSection = () =>
+  <section id="platform" className="pt-32 pb-16 bg-black relative">
+    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
+
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+
+      {/* Architecture Visualization */}
+      <div className="max-w-6xl mx-auto mb-20">
+        {/* Central Hub with Surrounding Components */}
+        <div className="relative">
+          {/* Background Connection Lines */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-96 h-96">
+              {/* Animated connection rings */}
+              <div className="absolute inset-0 border-2 border-cyan-500/20 rounded-full animate-ping"></div>
+              <div className="absolute inset-4 border border-blue-500/30 rounded-full animate-pulse"></div>
+              <div
+                className="absolute inset-8 border border-purple-500/20 rounded-full animate-ping"
+                style={{ animationDelay: "1s" }}
+              ></div>
+            </div>
+          </div>
+
+          {/* Central NUMIO Core */}
+          <div className="flex items-center justify-center mb-2">
+            <div className="relative z-20 text-center">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-4 animate-pulse shadow-2xl shadow-cyan-500/50 mx-auto">
+                <div className="w-24 h-24 rounded-full bg-black flex items-center justify-center">
+                  <PentagramLogo size="150" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-black text-white mb-2">NUMIO CORE</h3>
+              <p className="text-sm text-cyan-400 font-semibold">FINANCIAL INTELLIGENCE ENGINE</p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-xl text-zinc-400 max-w-4xl mx-auto">
+              A single, intelligent ecosystem that connects every aspect of your financial operations
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <Card className="bg-zinc-900 border-zinc-700 text-center hover:border-cyan-500/50 transition-all duration-300 group">
-          <CardContent className="pt-8 pb-6">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Activity className="w-8 h-8 text-black" />
+
+      {/* Data Flow Visualization */}
+      <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <Card className="bg-gradient-to-br from-zinc-900 to-zinc-800 border-zinc-700 hover:border-cyan-500/50 transition-all duration-300 group">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Database className="w-6 h-6 text-black" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-white">DATA INGESTION</h4>
+                <p className="text-xs text-cyan-400">Multi-source integration</p>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white">AUTOMATED WORKFLOWS</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              Tax and accounting processes that run themselves, reducing manual effort
-            </p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
+                <span className="text-sm text-zinc-300">ERP Systems</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.5s" }}
+                ></div>
+                <span className="text-sm text-zinc-300">Banking APIs</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+                <span className="text-sm text-zinc-300">Document Uploads</span>
+              </div>
+            </div>
           </CardContent>
         </Card>
-        <Card className="bg-zinc-900 border-zinc-700 text-center hover:border-purple-500/50 transition-all duration-300 group">
-          <CardContent className="pt-8 pb-6">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Brain className="w-8 h-8 text-black" />
+
+        <Card className="bg-gradient-to-br from-zinc-900 to-zinc-800 border-zinc-700 hover:border-purple-500/50 transition-all duration-300 group">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Brain className="w-6 h-6 text-black" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-white">INTELLIGENT PROCESSING</h4>
+                <p className="text-xs text-purple-400">AI-powered analysis</p>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white">AI-POWERED ANALYTICS</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              Advanced machine learning algorithms that continuously improve with your data
-            </p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                <span className="text-sm text-zinc-300">Pattern Recognition</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.5s" }}
+                ></div>
+                <span className="text-sm text-zinc-300">Anomaly Detection</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+                <span className="text-sm text-zinc-300">Predictive Analytics</span>
+              </div>
+            </div>
           </CardContent>
         </Card>
-        <Card className="bg-zinc-900 border-zinc-700 text-center hover:border-green-500/50 transition-all duration-300 group">
-          <CardContent className="pt-8 pb-6">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Lock className="w-8 h-8 text-black" />
+
+        <Card className="bg-gradient-to-br from-zinc-900 to-zinc-800 border-zinc-700 hover:border-green-500/50 transition-all duration-300 group">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Target className="w-6 h-6 text-black" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-white">ACTIONABLE INSIGHTS</h4>
+                <p className="text-xs text-green-400">Real-time decisions</p>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white">ENTERPRISE SECURITY</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              Bank-grade encryption, role-based access control, and comprehensive audit trails
-            </p>
-          </CardContent>
-        </Card>
-        <Card className="bg-zinc-900 border-zinc-700 text-center hover:border-orange-500/50 transition-all duration-300 group">
-          <CardContent className="pt-8 pb-6">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Plug className="w-8 h-8 text-black" />
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm text-zinc-300">Compliance Alerts</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.5s" }}
+                ></div>
+                <span className="text-sm text-zinc-300">Risk Assessments</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-3 h-3 bg-teal-400 rounded-full animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+                <span className="text-sm text-zinc-300">Automated Reports</span>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white">SEAMLESS INTEGRATION</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              Connect with your existing ERP, CRM, and financial systems through robust APIs
-            </p>
-          </CardContent>
-        </Card>
-        <Card className="bg-zinc-900 border-zinc-700 text-center hover:border-yellow-500/50 transition-all duration-300 group">
-          <CardContent className="pt-8 pb-6">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <ScrollText className="w-8 h-8 text-black" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white">REGULATORY COMPLIANCE</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              Built-in compliance with IFRS, GAAP, and local regulatory requirements
-            </p>
-          </CardContent>
-        </Card>
-        <Card className="bg-zinc-900 border-zinc-700 text-center hover:border-blue-500/50 transition-all duration-300 group">
-          <CardContent className="pt-8 pb-6">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <TrendingUp className="w-8 h-8 text-black" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white">SCALABLE ARCHITECTURE</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              Handles enterprise-scale data volumes with consistent performance
-            </p>
           </CardContent>
         </Card>
       </div>
     </div>
   </section>
-);
 
 export default PlatformSection;
