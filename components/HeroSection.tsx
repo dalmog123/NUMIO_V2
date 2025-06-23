@@ -12,7 +12,7 @@ const HeroSection = () => (
     {/* Background gradients */}
     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10 z-0" />
     <div className="absolute inset-0 z-0">
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-md" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
     </div>
 
@@ -31,9 +31,9 @@ const HeroSection = () => (
         {/* Headline & Paragraph */}
         <div className="space-y-6 sm:space-y-8 max-w-[90vw] mx-auto">
           <motion.h1
-            style={{ willChange: "transform, opacity" }}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.8 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight sm:leading-[1.1] md:leading-[1.15] lg:leading-[1.2] break-words mx-auto max-w-[820px]"
           >
@@ -47,6 +47,7 @@ const HeroSection = () => (
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.3 }}
             className="mt-4 text-base sm:text-xl lg:text-2xl text-zinc-300 max-w-3xl mx-auto leading-relaxed px-2 sm:px-0"
           >
@@ -61,6 +62,7 @@ const HeroSection = () => (
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.5 }}
           className="flex flex-row justify-center gap-2 sm:gap-6 mt-6 px-4 sm:px-0"
         >
@@ -91,6 +93,7 @@ const HeroSection = () => (
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.7 }}
           className="flex flex-row flex-wrap justify-center gap-4 mt-6 px-4 sm:px-0 md:pb-24"
         >
