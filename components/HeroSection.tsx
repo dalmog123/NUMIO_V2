@@ -95,7 +95,7 @@ const HeroSection = () => (
           }}
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
-          className="mt-16 mx-auto flex flex-col items-center text-white dark:text-white bg-transparent cursor-pointer hover:text-cyan-400 transition-colors"
+          className="mt-16 pb-16 mx-auto flex flex-col items-center text-white dark:text-white bg-transparent cursor-pointer hover:text-cyan-400 transition-colors"
         >
           <span className="text-sm mb-2">DISCOVER OUR MISSION</span>
           <ChevronDown className="h-6 w-6" />
