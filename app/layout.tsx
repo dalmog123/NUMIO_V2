@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import MouseMoveEffect from '@/components/MouseMoveEffect'
 
 export const metadata: Metadata = {
   title: 'NUMIO Solutions',
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body >{children}
+        <MouseMoveEffect />
+      </body>
     </html>
   )
 }
