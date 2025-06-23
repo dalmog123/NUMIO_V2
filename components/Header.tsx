@@ -3,13 +3,11 @@
 import ScrollLink from "@/components/ScrollLink";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import PentagramLogo from "./PentegramLogo";
 import Image from "next/image";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Prevent background scroll when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -50,6 +48,7 @@ const Header = () => {
               <p className="text-xs text-zinc-400">FINANCIAL INTELLIGENCE</p>
             </div>
           </div>
+
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center space-x-8">
             <ScrollLink
@@ -90,114 +89,98 @@ const Header = () => {
               </a>
             </Button>
           </nav>
+
           {/* Mobile hamburger or close button */}
-          {!menuOpen ? (
-            <button
-              className="lg:hidden flex items-center justify-center p-2 rounded-md text-zinc-300 hover:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              aria-label="Open menu"
-              onClick={() => setMenuOpen(true)}
+          <button
+            className="lg:hidden flex items-center justify-center p-2 rounded-md text-zinc-300 hover:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          ) : (
-            <button
-              className="lg:hidden flex items-center justify-center p-2 rounded-md text-zinc-300 hover:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              aria-label="Close menu"
-              onClick={() => setMenuOpen(false)}
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
+              {menuOpen ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M6 18L18 6M6 6l12 12"
                 />
-              </svg>
-            </button>
-          )}
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
         </div>
       </div>
-      {/* Mobile dropdown menu with overlay */}
-      {/* Overlay */}
+
+      {/* Mobile dropdown menu + transparent backdrop */}
       {menuOpen && (
         <div
-          className="lg:hidden fixed inset-0 z-[9998] bg-black/30"
-          aria-hidden="true"
-          onClick={() => setMenuOpen(false)}
-        />
-      )}
-      {/* Dropdown menu */}
-      <div
-        className={`lg:hidden fixed left-0 right-0 top-16 w-full bg-zinc-900 border-b border-zinc-800 shadow-2xl z-[9999] flex flex-col items-center py-6 space-y-6 transition-all duration-300 ${menuOpen
-          ? "opacity-100 scale-100 pointer-events-auto"
-          : "opacity-0 scale-95 pointer-events-none"
-          }`}
-        style={{ overscrollBehavior: "contain" }}
-      >
-        <div onClick={() => setMenuOpen(false)}>
-          <ScrollLink
-            href="#products"
-            className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
-          >
-            PRODUCTS
-          </ScrollLink>
-        </div>
-        <div onClick={() => setMenuOpen(false)}>
-          <ScrollLink
-            href="#platform"
-            className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
-          >
-            PLATFORM
-          </ScrollLink>
-        </div>
-        <div onClick={() => setMenuOpen(false)}>
-          <ScrollLink
-            href="#team"
-            className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
-          >
-            TEAM
-          </ScrollLink>
-        </div>
-        <div onClick={() => setMenuOpen(false)}>
-          <ScrollLink
-            href="#contact"
-            className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
-          >
-            CONTACT
-          </ScrollLink>
-        </div>
-        <Button
-          size="lg"
-          className="w-11/12 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black font-bold"
-          asChild
+          className="lg:hidden fixed inset-0 z-[9999] flex flex-col"
+          style={{ overscrollBehavior: "contain" }}
         >
-          <a
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3-UydaYC9OosZwLXotWsj2zwRyzzsN1oQH6HHXV8W74UDK7qc-cUUr9Be1x59QKphr8_7xtX2Z"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Menu container */}
+          <div className="backdrop-blur-md bg-zinc-900/80 border-b border-zinc-800 pt-16 pb-6 px-4 flex flex-col items-center space-y-6 shadow-lg">
+            <ScrollLink
+              href="#products"
+              className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              PRODUCTS
+            </ScrollLink>
+            <ScrollLink
+              href="#platform"
+              className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              PLATFORM
+            </ScrollLink>
+            <ScrollLink
+              href="#team"
+              className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              TEAM
+            </ScrollLink>
+            <ScrollLink
+              href="#contact"
+              className="text-lg font-semibold text-zinc-100 hover:text-cyan-400 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              CONTACT
+            </ScrollLink>
+            <Button
+              size="lg"
+              className="w-11/12 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black font-bold"
+              asChild
+            >
+              <a
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3-UydaYC9OosZwLXotWsj2zwRyzzsN1oQH6HHXV8W74UDK7qc-cUUr9Be1x59QKphr8_7xtX2Z"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+              >
+                SCHEDULE DEMO
+              </a>
+            </Button>
+          </div>
+
+          {/* Transparent clickable area to close */}
+          <div
+            className="flex-1 bg-transparent"
             onClick={() => setMenuOpen(false)}
-          >
-            SCHEDULE DEMO
-          </a>
-        </Button>
-      </div>
+          />
+        </div>
+      )}
+
     </header>
   );
 };
