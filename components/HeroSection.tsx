@@ -59,7 +59,7 @@ const HeroSection = () => (
         </div>
 
         {/* Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -72,10 +72,10 @@ const HeroSection = () => (
             { value: "25%", label: "LESS RESOURCES" },
           ].map((item, i) => (
             <div key={i} className="relative group">
-              {/* White blur aura */}
+              
               <div className="absolute inset-0 bg-white rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity w-full h-full"></div>
 
-              {/* Stat card */}
+              
               <div className="relative min-w-[80px] max-w-[90px] px-2 py-2 sm:min-w-[110px] sm:px-8 sm:py-6 bg-zinc-900 border border-zinc-700 rounded-xl h-full flex flex-col items-center justify-center">
                 <div className="text-base sm:text-3xl font-black text-white">
                   {item.value}
@@ -86,7 +86,7 @@ const HeroSection = () => (
               </div>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* scroll cue - moved inside the content area */}
         <motion.button
