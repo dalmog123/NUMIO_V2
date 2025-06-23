@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 const ProductsSection = () => (
-  <section id="products" className="pt-14 sm:pt-32 pb-32 bg-zinc-950">
+  <section id="products" className="scroll-mt-16 pt-14 sm:pt-32 pb-32 bg-zinc-950">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
         <h2 className="text-5xl font-black mb-6">
