@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import MouseMoveEffect from '@/components/MouseMoveEffect'
+// import MouseMoveEffect from '@/components/MouseMoveEffect'
 
 export const metadata: Metadata = {
   title: 'NUMIO Solutions',
