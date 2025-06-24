@@ -18,8 +18,7 @@ const MissionSection = () => (
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> MISSION</span>
             </h3>
             <p className="text-lg text-zinc-300 leading-relaxed">
-              Founded by top‑tier tax strategists, visionaries and accountants, Numio is on a mission to automate
-              tax and accounting compliance so accounting professionals can focus on what matters most.
+              Founded by top‑tier tax strategists, visionaries and accountants, Numio puts your compliance on autopilot - automating the toughest 10% of tax and accounting challenges.
             </p>
           </div>
         </div>
