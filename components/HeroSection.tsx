@@ -1,59 +1,37 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-
-// Lazy load the logo
-const PentagramLogo = dynamic(() => import("./PentegramLogo"), {
-  ssr: false,
-  loading: () => <div className="w-[160px] h-[80px] bg-zinc-600 rounded-md" />,
-});
+import PentagramLogo from "./PentegramLogo"; // NO dynamic import
 
 const HeroSection = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsMobile(window.innerWidth < 640);
-    }
-  }, []);
-
-  // Function to animate only if not on mobile
-  const animate = !isMobile;
-
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-28 md:pt-24 lg:pt-20 xl:pt-16">
-      {/* Gradient background always on */}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      {/* Static background gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10 z-0" />
-
-      {/* Blurs only for non-mobile */}
-      {!isMobile && (
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-xl" />
-        </div>
-      )}
+      <div className="absolute inset-0 z-0 hidden sm:block">
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-xl" />
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           {/* Logo */}
           <motion.div
-            initial={animate ? { opacity: 0, scale: 0.8 } : false}
-            animate={animate ? { opacity: 1, scale: 1 } : false}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="mb-8 flex justify-center"
           >
             <PentagramLogo className="w-[160px] sm:w-[160px] md:w-[200px] h-auto" />
           </motion.div>
 
-          {/* Headline */}
+          {/* Heading */}
           <motion.h1
-            initial={animate ? { opacity: 0, y: 60 } : false}
-            animate={animate ? { opacity: 1, y: 0 } : false}
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight sm:leading-[1.1] md:leading-[1.15] lg:leading-[1.2] break-words mx-auto max-w-[820px]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight break-words mx-auto max-w-[820px]"
           >
             <span className="block">FINANCIAL</span>
             <span className="block">INTELLIGENCE</span>
@@ -64,8 +42,8 @@ const HeroSection = () => {
 
           {/* Paragraph */}
           <motion.p
-            initial={animate ? { opacity: 0, y: 40 } : false}
-            animate={animate ? { opacity: 1, y: 0 } : false}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
             className="mt-4 text-base sm:text-xl lg:text-2xl text-zinc-300 max-w-3xl mx-auto leading-relaxed px-2 sm:px-0"
           >
@@ -77,8 +55,8 @@ const HeroSection = () => {
 
           {/* Stats */}
           <motion.div
-            initial={animate ? { opacity: 0, y: 40 } : false}
-            animate={animate ? { opacity: 1, y: 0 } : false}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.5 }}
             className="flex flex-row justify-center gap-2 sm:gap-6 mt-6 px-4 sm:px-0"
           >
@@ -106,11 +84,11 @@ const HeroSection = () => {
             onClick={() => {
               document.getElementById("focus")?.scrollIntoView({ behavior: "smooth" });
             }}
-            animate={animate ? { y: [0, 10, 0] } : false}
-            transition={animate ? { repeat: Number.POSITIVE_INFINITY, duration: 2 } : undefined}
-            className="mt-16 pb-16 mx-auto flex flex-col items-center text-white dark:text-white bg-transparent cursor-pointer hover:text-cyan-400 transition-colors"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="mt-16 pb-16 mx-auto flex flex-col items-center text-white bg-transparent cursor-pointer hover:text-cyan-400 transition-colors"
           >
-            <span className="text-sm mb-2">DISCOVER OUR MISSION</span>
+            <span className="text-sm mb-2">DISCOVER OUR MISSION 123</span>
             <ChevronDown className="h-6 w-6" />
           </motion.button>
         </div>
