@@ -115,7 +115,7 @@ const HeroSection = () => {
             transition={!isMobile ? { repeat: Number.POSITIVE_INFINITY, duration: 2 } : undefined}
             className="mt-16 pb-16 mx-auto flex flex-col items-center text-white dark:text-white bg-transparent cursor-pointer hover:text-cyan-400 transition-colors"
           >
-            <span className="text-sm mb-2">DISCOVER OUR MISSION</span>
+            <span className="text-sm mb-2">DISCOVER OUR MISSION 22</span>
             <ChevronDown className="h-6 w-6" />
           </motion.button>
         </motion.div>
