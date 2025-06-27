@@ -86,6 +86,13 @@ body {
   }
 }
 
+/* globals.css or tailwind.config.js → extend */
+.scroll-mt-custom {
+  scroll-margin-top: -2.5rem;
+  /* adjust as needed */
+}
+
+
 @layer base {
   * {
     @apply border-border;

@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Mail } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 const ContactSection = () => (
   <section id="contact" className="py-20 sm:py-32 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black">
@@ -16,7 +15,7 @@ const ContactSection = () => (
         </p>
         <Button
           size="lg"
-          className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black font-bold text-base sm:text-lg px-8 sm:px-12 py-4"
+          className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black font-bold text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6"
           asChild
         >
           <a
@@ -24,7 +23,7 @@ const ContactSection = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Calendar className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+            <Calendar className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 mr-2 sm:mr-3" />
             GET IN TOUCH
           </a>
         </Button>

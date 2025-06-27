@@ -3,7 +3,7 @@ import { Sparkles, Linkedin } from "lucide-react";
 import PentagramLogo from "./PentegramLogo";
 
 const TeamSection = () => (
-  <section id="team" className="py-32 bg-black">
+  <section id="team" className="scroll-mt-custom py-32 bg-black">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
         <div className="flex justify-center mb-6">
