@@ -59,20 +59,14 @@ const ProductsSection = () => (
             </div>
           </div>
           <div className="relative">
-            <div className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700">
-              <TaxIntelligenceShowcase />
-            </div>
-
+            <TaxIntelligenceShowcase />
           </div>
         </div>
 
         {/* Revenue Recognition */}
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center pb-12 border-b border-zinc-800">
           <div className="relative order-2 lg:order-1">
-            <div className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700">
-              <RevenueRecognitionShowcase />
-            </div>
-
+            <RevenueRecognitionShowcase />
           </div>
           <div className="space-y-6 order-1 lg:order-2">
             <div className="space-y-3 sm:space-y-4">
@@ -148,9 +142,7 @@ const ProductsSection = () => (
             </div>
           </div>
           <div className="relative">
-            <div className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700 max-w-[600px] mx-auto">
-              <LeasesManagementShowcase />
-            </div>
+            <LeasesManagementShowcase />
           </div>
         </div>
 
