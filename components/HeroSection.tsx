@@ -9,7 +9,7 @@ import PentagramLogo from "./PentegramLogo";
 const LazyLoadStats = dynamic(() => import("./LazyLoadStats"), { ssr: false });
 
 const HeroSection = () => (
-  <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-28 md:pt-24 lg:pt-20 xl:pt-16">
+  <section className="min-h-dvh flex flex-col justify-between relative overflow-hidden pt-16 sm:pt-28 md:pt-24 lg:pt-20 xl:pt-16">
     {/* Background gradients */}
     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10 z-0" />
     <div className="absolute inset-0 z-0">
