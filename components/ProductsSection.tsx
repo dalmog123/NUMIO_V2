@@ -1,11 +1,8 @@
-import { Button } from "@/components/ui/button";
-import {
-  CheckCircle,
-  BarChart3,
-  FileText,
-  Database,
-  Lightbulb,
-} from "lucide-react";
+import { Button } from "@/components/ui/button"
+import { CheckCircle, Lightbulb } from "lucide-react"
+import TaxIntelligenceShowcase from "./ProductsShowcase/Tax-Inteligence-Showcase"
+import RevenueRecognitionShowcase from "./ProductsShowcase/Revenue-Recognition-Showcase"
+import LeasesManagementShowcase from "./ProductsShowcase/Leases-Managment-Showcase"
 
 const ProductsSection = () => (
   <section id="products" className="scroll-mt-16 pt-14 sm:pt-32 pb-32 bg-zinc-950">
@@ -30,11 +27,16 @@ const ProductsSection = () => (
                 </span>
               </div>
               <h3 className="text-2xl sm:text-4xl font-black">
-                TAX<span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> INTELLIGENCE</span>
+                TAX
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  {" "}
+                  INTELLIGENCE
+                </span>
               </h3>
               <p className="text-base sm:text-xl text-zinc-400">Tax Clarity. Business Certainty</p>
               <p className="text-sm sm:text-lg text-zinc-300 leading-relaxed">
-                Our flagship solution elevates tax compliance from a burden to a competitive edge with real-time monitoring, fraud detection, and predictive analytics.
+                Our flagship solution elevates tax compliance from a burden to a competitive edge with real-time
+                monitoring, fraud detection, and predictive analytics.
               </p>
             </div>
             <div className="space-y-3 sm:space-y-4">
@@ -57,22 +59,20 @@ const ProductsSection = () => (
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700">
-              <div className="w-full h-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
-                <BarChart3 className="w-24 h-24 sm:w-32 sm:h-32 text-cyan-400" />
-              </div>
+            <div className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700">
+              <TaxIntelligenceShowcase />
             </div>
+
           </div>
         </div>
 
         {/* Revenue Recognition */}
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center pb-12 border-b border-zinc-800">
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700">
-              <div className="w-full h-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
-                <FileText className="w-24 h-24 sm:w-32 sm:h-32 text-purple-400" />
-              </div>
+            <div className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700">
+              <RevenueRecognitionShowcase />
             </div>
+
           </div>
           <div className="space-y-6 order-1 lg:order-2">
             <div className="space-y-3 sm:space-y-4">
@@ -82,11 +82,16 @@ const ProductsSection = () => (
                 </span>
               </div>
               <h3 className="text-2xl sm:text-4xl font-black">
-                REVENUE<span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> RECOGNITION</span>
+                REVENUE
+                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                  {" "}
+                  RECOGNITION
+                </span>
               </h3>
               <p className="text-base sm:text-xl text-zinc-400">Streamline complex revenue recognition workflows</p>
               <p className="text-sm sm:text-lg text-zinc-300 leading-relaxed">
-                Automate revenue recognition across multiple contract types, performance obligations, and variable considerations with precision.
+                Automate revenue recognition across multiple contract types, performance obligations, and variable
+                considerations with precision.
               </p>
             </div>
             <div className="space-y-3 sm:space-y-4">
@@ -106,10 +111,6 @@ const ProductsSection = () => (
           </div>
         </div>
 
-        {/* <div className="w-20 h-20 rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center">
-                <span className="text-[2.5rem] font-black font-mono tracking-tight uppercase text-white">03</span>
-              </div> */}
-
         {/* Leases Management */}
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center pb-12 border-zinc-800">
           <div className="space-y-6">
@@ -120,7 +121,11 @@ const ProductsSection = () => (
                 </span>
               </div>
               <h3 className="text-2xl sm:text-4xl font-black">
-                LEASES<span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> MANAGEMENT</span>
+                LEASES
+                <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                  {" "}
+                  MANAGEMENT
+                </span>
               </h3>
               <p className="text-base sm:text-xl text-zinc-400">Simplify lease accounting and compliance</p>
               <p className="text-sm sm:text-lg text-zinc-300 leading-relaxed">
@@ -143,10 +148,8 @@ const ProductsSection = () => (
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700">
-              <div className="w-full h-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
-                <Database className="w-24 h-24 sm:w-32 sm:h-32 text-green-400" />
-              </div>
+            <div className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 sm:p-8 border border-zinc-700 max-w-[600px] mx-auto">
+              <LeasesManagementShowcase />
             </div>
           </div>
         </div>
@@ -158,11 +161,13 @@ const ProductsSection = () => (
               <Lightbulb className="w-8 h-8 text-black" />
             </div>
             <h3 className="text-3xl sm:text-4xl font-black">
-              COMING<span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> SOON</span>
+              COMING
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> SOON</span>
             </h3>
             <p className="text-base sm:text-xl text-zinc-400">The future of financial intelligence</p>
             <p className="text-sm sm:text-lg text-zinc-300 leading-relaxed max-w-3xl mx-auto">
-              Our R&D team is developing next-generation solutions to address emerging financial challenges with cutting-edge AI and machine learning technologies.
+              Our R&D team is developing next-generation solutions to address emerging financial challenges with
+              cutting-edge AI and machine learning technologies.
             </p>
           </div>
           <Button
@@ -182,6 +187,6 @@ const ProductsSection = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default ProductsSection;
+export default ProductsSection
