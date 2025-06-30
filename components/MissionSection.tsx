@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { SplineScene } from "./ui/splite";
 
 const MissionSection = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
 
   return (
     <section className="pt-12 lg:pt-32 pb-0 bg-zinc-950 overflow-x-hidden">
