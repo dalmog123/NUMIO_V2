@@ -3,7 +3,7 @@ import { Brain, Database, Target } from "lucide-react";
 import PentagramLogo from "./PentegramLogo";
 
 const PlatformSection = () =>
-  <section id="platform" className="scroll-mt-8 md:scroll-mt-28 pt-32 pb-16 bg-black relative">
+  <section id="platform" className="scroll-mt-8 md:scroll-mt-28 pt-32 pb-0 lg:pb-16 bg-black relative">
     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
 
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
