@@ -5,6 +5,9 @@ import MouseMoveEffect from '@/components/MouseMoveEffect'
 export const metadata: Metadata = {
   title: 'NUMIO Solutions',
   description: 'NUMIO Solutions puts your compliance on autopilot - automating the toughest 10% of tax and accounting challenges.',
+  icons: {
+    icon: '/assets/NumioLogo.png', // or PNG, SVG, etc.
+  },
 }
 
 export default function RootLayout({
